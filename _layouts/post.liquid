@@ -6,6 +6,15 @@ layout: default
 {% assign categories = page.categories | join: '' %}
 {% assign url_beginning = page.url | slice: 0, 6 %}
 
+{% comment %} Find a bilingual sibling post (same translation_key, different URL) {% endcomment %}
+{% assign lang_sibling = null %}
+{% if page.translation_key and page.translation_key != '' %}
+  {% assign siblings = site.posts | where: 'translation_key', page.translation_key %}
+  {% for sib in siblings %}
+    {% if sib.url != page.url %}{% assign lang_sibling = sib %}{% endif %}
+  {% endfor %}
+{% endif %}
+
 {% if page._styles %}
   <!-- Page/Post style -->
   <style type="text/css">
@@ -15,6 +24,29 @@ layout: default
 
 <div class="post">
   <header class="post-header">
+    {% if lang_sibling %}
+      {% comment %} Keep positions fixed: EN is always on the left, DE on the right. {% endcomment %}
+      {% if page.lang == 'de' %}
+        {% assign en_url = lang_sibling.url %}
+        {% assign de_url = page.url %}
+      {% else %}
+        {% assign en_url = page.url %}
+        {% assign de_url = lang_sibling.url %}
+      {% endif %}
+      <div class="post-lang-switch">
+        {% if page.lang == 'de' %}
+          <a href="{{ en_url | relative_url }}">EN</a>
+        {% else %}
+          <span class="active">EN</span>
+        {% endif %}
+        <span class="sep">|</span>
+        {% if page.lang == 'de' %}
+          <span class="active">DE</span>
+        {% else %}
+          <a href="{{ de_url | relative_url }}">DE</a>
+        {% endif %}
+      </div>
+    {% endif %}
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">
       Created on {{ page.date | date: '%B %d, %Y' }}

@@ -109,6 +109,23 @@ pagination:
       {% assign postlist = site.posts %}
     {% endif %}
 
+    {%- comment -%}
+      Hide the German version of a bilingual pair from the index.
+      Shows only posts where lang is not "de".
+    {%- endcomment -%}
+    {% assign postlist = postlist | where_exp: "p", "p.lang != 'de'" %}
+
+    {%- comment -%}
+      Hide posts tagged "test" unless site.include_test_posts is true.
+    {%- endcomment -%}
+    {% unless site.include_test_posts %}
+      {% assign _filtered = "" | split: "" %}
+      {% for _p in postlist %}
+        {% unless _p.tags contains 'test' %}{% assign _filtered = _filtered | push: _p %}{% endunless %}
+      {% endfor %}
+      {% assign postlist = _filtered %}
+    {% endunless %}
+
     {% for post in postlist %}
 
     {% if post.external_source == blank %}

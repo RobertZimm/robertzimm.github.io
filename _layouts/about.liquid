@@ -58,7 +58,15 @@ layout: default
     {% endif %}
 
     <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled and site.posts.size > 1 %}
+    {% assign en_posts = site.posts | where_exp: 'p', "p.lang != 'de'" %}
+    {% unless site.include_test_posts %}
+      {% assign _filtered = '' | split: '' %}
+      {% for _p in en_posts %}
+        {% unless _p.tags contains 'test' %}{% assign _filtered = _filtered | push: _p %}{% endunless %}
+      {% endfor %}
+      {% assign en_posts = _filtered %}
+    {% endunless %}
+    {% if page.latest_posts and page.latest_posts.enabled and en_posts.size > 0 %}
       <h2>
         <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest blogs</a>
       </h2>

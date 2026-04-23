@@ -32,6 +32,37 @@
   }
 }
 
+.post-header {
+  position: relative;
+}
+
+.post-lang-switch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.9rem;
+  font-family: monospace;
+
+  .active {
+    font-weight: 600;
+    color: var(--global-theme-color);
+  }
+
+  .sep {
+    margin: 0 0.35rem;
+    color: var(--global-text-color-light);
+  }
+
+  a {
+    color: var(--global-text-color-light);
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+}
+
 .post-title {
   mjx-container[jax="CHTML"][display="true"] {
     display: unset;

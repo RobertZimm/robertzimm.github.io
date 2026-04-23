@@ -5,6 +5,7 @@ title: people
 description: members of the lab or group
 nav: false
 nav_order: 7
+published: false
 
 profiles:
   # add one block per profile; each block can reference a content file in _pages/

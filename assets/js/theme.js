@@ -1,11 +1,7 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
-// Binary toggle between light and dark, based on the currently displayed theme
-// (so the button always produces a visible change, even when "system" pref matches).
-let toggleThemeSetting = () => {
-  let computed = determineComputedTheme();
-  setThemeSetting(computed == "light" ? "dark" : "light");
-};
+// (toggleThemeSetting removed — the pill widget now lets users click "dark" or
+// "light" explicitly rather than toggling through states.)
 
 // Change the theme setting and apply the theme.
 let setThemeSetting = (themeSetting) => {
@@ -291,12 +287,13 @@ let initTheme = () => {
 
   setThemeSetting(themeSetting);
 
-  // Add event listener to the theme toggle button.
+  // Wire each button of the dark | light pill to set the theme explicitly.
   document.addEventListener("DOMContentLoaded", function () {
-    const mode_toggle = document.getElementById("light-toggle");
-
-    mode_toggle.addEventListener("click", function () {
-      toggleThemeSetting();
+    const buttons = document.querySelectorAll("#light-toggle .theme-btn");
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        setThemeSetting(btn.dataset.themeChoice);
+      });
     });
   });
 

@@ -47,7 +47,8 @@
       </button>
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+        {% comment %} Centre group: the page links (absolute-centred in the navbar on sm+ screens) {% endcomment %}
+        <ul class="navbar-nav navbar-nav-center flex-nowrap">
           {% for page in site.pages %}
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
@@ -123,6 +124,10 @@
               {% endif %}
             {% endif %}
           {% endfor %}
+        </ul>
+
+        {% comment %} Right group: search + theme toggle. Pinned to the right edge via ml-auto. {% endcomment %}
+        <ul class="navbar-nav ml-auto flex-nowrap">
           {% if site.search_enabled %}
             <!-- Search -->
             <li class="nav-item">
@@ -132,13 +137,13 @@
             </li>
           {% endif %}
           {% if site.enable_darkmode %}
-            <!-- Toogle theme mode -->
+            <!-- Theme switch (matches the EN | DE style) -->
             <li class="toggle-container">
-              <button id="light-toggle" title="Change theme">
-                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
-                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
-                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
-              </button>
+              <div id="light-toggle" class="theme-switch" title="Change theme">
+                <button type="button" class="theme-btn" data-theme-choice="dark">dark</button>
+                <span class="sep">|</span>
+                <button type="button" class="theme-btn" data-theme-choice="light">light</button>
+              </div>
             </li>
           {% endif %}
         </ul>

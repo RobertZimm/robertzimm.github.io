@@ -43,16 +43,18 @@
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
 
+  /* Never show the system (half-sun-moon) icon — always display the concrete current theme */
   #light-toggle-system {
-    display: inline-block;
+    display: none;
   }
 
   #light-toggle-dark {
     display: none;
   }
 
+  /* light is the default computed theme, so show the sun icon by default */
   #light-toggle-light {
-    display: none;
+    display: inline-block;
   }
 
   .only-light {
@@ -119,38 +121,21 @@ html[data-theme="dark"] {
   .only-dark {
     display: block;
   }
+
+  /* When dark mode is the computed theme, show the moon and hide the sun */
+  #light-toggle-dark {
+    display: inline-block;
+  }
+
+  #light-toggle-light {
+    display: none;
+  }
 }
 
 html[data-theme-setting="dark"] {
-  #light-toggle-system {
-    display: none;
-  }
-
-  #light-toggle-dark {
-    display: inline-block;
-  }
-
-  #light-toggle-light {
-    display: none;
-  }
-
   #back-to-top {
     color: var(--global-back-to-top-text-color);
     background: var(--global-back-to-top-bg-color);
-  }
-}
-
-html[data-theme-setting="light"] {
-  #light-toggle-system {
-    display: none;
-  }
-
-  #light-toggle-dark {
-    display: none;
-  }
-
-  #light-toggle-light {
-    display: inline-block;
   }
 }
 
