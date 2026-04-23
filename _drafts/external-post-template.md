@@ -5,7 +5,7 @@ date: 2026-01-01 12:00:00
 description: A one-line summary shown on the blog index; clicking the card redirects to the external URL.
 tags: external
 categories: external-posts
-external_source: Medium     # label shown on the post card (e.g. Medium, Substack, Lab Blog)
+external_source: Medium # label shown on the post card (e.g. Medium, Substack, Lab Blog)
 redirect: https://example.com/your-external-post
 ---
 

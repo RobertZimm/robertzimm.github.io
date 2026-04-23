@@ -18,7 +18,7 @@ layout: default
     {% if page.profile %}
       {% comment %} Decide whether a real photo is available: site.profile_photo must be set AND the file must exist. {% endcomment %}
       {% assign has_photo = false %}
-      {% if site.profile_photo and site.profile_photo != "" %}
+      {% if site.profile_photo and site.profile_photo != '' %}
         {% assign target_path = site.profile_photo | prepend: '/' | replace: '//', '/' %}
         {% assign photo_matches = site.static_files | where: 'path', target_path %}
         {% if photo_matches.size > 0 %}
