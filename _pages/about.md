@@ -2,19 +2,20 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: M.Sc. · Institute of Information Processing (TNT), Leibniz University Hannover
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Schneiderberg 32</p>
+    <p>30167 Hannover, Germany</p>
+    <p>Tel: +49 511 762-5311</p>
+    <p>Fax: +49 511 762-5333</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items

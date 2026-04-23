@@ -2,6 +2,7 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
+      {% comment %}
       {% if page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
           {% if site.title == 'blank' %}
@@ -24,6 +25,11 @@
         <!-- Social Icons -->
         <div class="navbar-brand social">{% social_links %}</div>
       {% endif %}
+      {% endcomment %}
+
+      <!-- Socials (far-left) -->
+      <div class="navbar-socials">{% social_links %}</div>
+
       <!-- Navbar Toggle -->
       <button
         class="navbar-toggler collapsed ml-auto"
@@ -121,7 +127,7 @@
             <!-- Search -->
             <li class="nav-item">
               <button id="search-toggle" title="Search" onclick="openSearchModal()">
-                <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span>
+                <span class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></span>
               </button>
             </li>
           {% endif %}
