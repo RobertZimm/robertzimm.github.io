@@ -1,15 +1,10 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
-// Toggle through light, dark, and system theme settings.
+// Binary toggle between light and dark, based on the currently displayed theme
+// (so the button always produces a visible change, even when "system" pref matches).
 let toggleThemeSetting = () => {
-  let themeSetting = determineThemeSetting();
-  if (themeSetting == "system") {
-    setThemeSetting("light");
-  } else if (themeSetting == "light") {
-    setThemeSetting("dark");
-  } else {
-    setThemeSetting("system");
-  }
+  let computed = determineComputedTheme();
+  setThemeSetting(computed == "light" ? "dark" : "light");
 };
 
 // Change the theme setting and apply the theme.
