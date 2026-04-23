@@ -1,189 +1,192 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Robert Zimmermann
+  label: PhD Researcher
+  email: zimmerro@tnt.uni-hannover.de
+  location: Hannover, Germany
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
+      username: RobertZimm
     - network: LinkedIn
-      username: example
+      username: robert-zimmermann-132137237
 
   address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+    street: Schneiderberg 32
+    city: Hannover
+    region: Lower Saxony
+    postalCode: "30167"
+    countryCode: DE
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: Leibniz University Hannover
+        location: Hannover, Germany
+        url: https://www.uni-hannover.de/
+        area: Business Administration and Engineering
+        studyType: M.Sc.
+        start_date: 2023-10
+        end_date: 2026-01
+        score: "1.0"
+        summary: >
+          Master thesis at the Institute of Information Processing (TNT) —
+          "Interpretability of vision transformers through the synthesis of
+          prototype- and concept-based explanation methods".
         highlights:
-          - Description 1.
-          - Description 2.
+          - Specialisation in Operations and Information Management, Digitalisation and Automation.
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
+      - institution: University of Technology Sydney
+        location: Sydney, Australia
+        url: https://www.uts.edu.au/
+        area: Information Technology
+        studyType: Study Abroad
+        start_date: 2023-02
+        end_date: 2023-06
+        score: High Distinction
+        summary: "Subjects: Cybersecurity, Quantum Computing and Networking."
         highlights:
-          - Description 1.
-          - Description 2.
+          - Member of the CSEC Club, Chess Club, and UTS Handball Club.
+
+      - institution: Leibniz University Hannover
+        location: Hannover, Germany
+        url: https://www.uni-hannover.de/
+        area: Business Administration and Engineering
+        studyType: B.Sc.
+        start_date: 2019-10
+        end_date: 2023-04
+        score: "1.7"
+        summary: >
+          Bachelor thesis with Continental Reifen GmbH and the Institute of Information Processing (TNT) —
+          "Development of a machine-learning-based system for the identification of process phases in an
+          industrial rubber mixer from infrared camera images".
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Leibniz University Hannover — Institute of Information Processing (TNT)
+        position: Research Associate (PhD Researcher)
+        location: Hannover, Germany
+        start_date: 2026-02
+        end_date: Present
+        summary: PhD research on the interpretability of visual foundation models.
+
+      - company: Leibniz University Hannover — Institute of Information Processing (TNT)
+        position: Student Assistant
+        location: Hannover, Germany
+        start_date: 2024-01
+        end_date: 2026-01
         highlights:
-          - Relativity
-          - Description 2.
+          - Development, adaptation, and training of recommender systems based on graph neural networks for the fashion industry.
+          - Use of quadratic programming and prototype/concept-based approaches to make visual foundation models (Vision Transformers such as DINOv2) interpretable (XAI).
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Continental — Machine Intelligence, Digital Solutions Tires
+        position: Machine Learning Engineer
+        location: Hannover, Germany
+        start_date: 2022-11
+        end_date: 2023-01
         highlights:
-          - Description 1.
-          - Description 2.
+          - Training and implementation of convolutional neural networks with TensorFlow.
+          - Integration and networking of industrial cameras in an inspection system using TwinCAT and Python.
+          - Development of a graphical user interface in Python.
+          - Robot simulations with RoboDK.
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
+      - company: Continental — Machine Intelligence, Digital Solutions Tires (joint with TNT, Leibniz University Hannover)
+        position: Bachelor Thesis
+        location: Hannover, Germany
+        start_date: 2022-06
+        end_date: 2022-08
+        summary: Development of a machine-learning-based system for the identification of process phases in an industrial rubber mixer from infrared camera images.
 
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
+      - company: HIS-Institut für Hochschulentwicklung e.V.
+        position: Student Assistant
+        location: Hannover, Germany
+        start_date: 2021-01
+        end_date: 2022-09
+        highlights:
+          - VBA programming for MS Excel evaluations.
+          - Technical implementation of hybrid events (OBS Studio, Zoom, MS PowerPoint), including online integration of speakers.
+          - General support activities with MS Office applications (Word, Excel, Access).
 
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
+      - company: Continental — InnoLab Tires
+        position: Prototype Engineer
+        location: Hannover, Germany
+        start_date: 2021-09
+        end_date: 2021-12
+        highlights:
+          - Built a test stand for spraying tires, integrating a 2D and 3D camera system and image-processing control of a collaborative robot.
+          - Extended a conveyor-belt auto-loading trainer with a 2D/3D camera system and collaborative-robot control.
+          - Developed a chess-playing collaborative-robot demonstrator, including gripping system and Python control.
+          - Built a measurement system for quality inspection of tire sensor systems (2D camera, image processing, evaluation).
+          - Built a test rig to measure temperature sensitivity of a sensor system, controlling a heating system via Raspberry Pi.
+
+      - company: Leibniz University Hannover — Institute of Transport and Automation Technology (ITA)
+        position: Student Assistant
+        location: Hannover, Germany
+        start_date: 2022-01
+        end_date: 2022-03
 
     Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+      - company: Johanneskirchengemeinde Empelde
+        position: Group Leader in Youth Work
+        location: Empelde, Germany
+        start_date: 2016-01
+        end_date: 2021-08
+        summary: Supervision of groups of younger children and projects in church youth work.
 
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+      - company: Johanneskirchengemeinde Empelde
+        position: Childcare Worker
+        location: Empelde, Germany
+        start_date: 2021-01
+        end_date: Present
+        summary: Running a reading club for local, socially disadvantaged children.
 
     Publications:
-      - title: Zur Elektrodynamik bewegter Körper
+      - title: "DINO-QPM: Adapting Visual Foundation Models for Globally Interpretable Image Classification"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+          - Robert Zimmermann
+          - Thomas Norrenbrock
+          - Bodo Rosenhahn
+        publisher: "CVPR 2026 Workshops — 5th Explainable AI for Computer Vision (XAI4CV)"
+        releaseDate: 2026
+        url: https://arxiv.org/abs/2604.07166
+        summary: A lightweight interpretability adapter that turns frozen DINOv2 features into contrastive, class-independent representations for globally interpretable image classification, with spatially localisable features and a sparsity loss for grounded explanations.
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
+    Awards:
+      - title: Dean's List
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+          - Leibniz University Hannover
+        awarder: Leibniz University Hannover
+        summary: Academic honour awarded for outstanding performance during studies.
 
     Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Research areas
+        icon: fa-solid fa-flask
+        keywords: "Explainable AI (XAI), Interpretable Machine Learning, Computer Vision, Visual Foundation Models, Machine Learning, Graph Neural Networks, Quantum Computing, Robotics, Operations Research, Operations Management"
+
+      - name: Programming & tools
+        icon: fa-solid fa-code
+        keywords: "Python, PyTorch, OpenCV, Pandas, GAMS, VBA, HTML, Bash, PowerShell, TwinCAT, RoboDK, Raspberry Pi, Git, LaTeX"
 
     Languages:
       - name: German
-        summary: "Native speaker"
+        summary: "Native"
 
       - name: English
-        summary: "Fluent"
+        summary: "Full professional proficiency"
+
+      - name: Spanish
+        summary: "Limited working proficiency"
+
+      - name: Chinese
+        summary: "Elementary"
 
     Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Research
+        icon: fa-solid fa-magnifying-glass
+        keywords: "Interpretability, visual foundation models, concept-based explanations, human-centred AI"
 
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
+      - name: Sports
+        icon: fa-solid fa-person-running
+        keywords: "Handball, hiking, and most other sports"
 
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: Music
+        icon: fa-solid fa-guitar
+        keywords: "Guitar"

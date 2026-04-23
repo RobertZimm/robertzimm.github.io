@@ -16,24 +16,33 @@ layout: default
 
   <article>
     {% if page.profile %}
+      {% comment %} Decide whether a real photo is available: site.profile_photo must be set AND the file must exist. {% endcomment %}
+      {% assign has_photo = false %}
+      {% if site.profile_photo and site.profile_photo != "" %}
+        {% assign target_path = site.profile_photo | prepend: '/' | replace: '//', '/' %}
+        {% assign photo_matches = site.static_files | where: 'path', target_path %}
+        {% if photo_matches.size > 0 %}
+          {% assign has_photo = true %}
+        {% endif %}
+      {% endif %}
+
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+        {% if has_photo %}
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
+          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3 }}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
+          {% include figure.liquid loading="eager" path=site.profile_photo class=profile_image_class sizes=sizes alt="Profile photo" cache_bust=true %}
+          {% if page.profile.more_info %}
+            <div class="more-info">{{ page.profile.more_info }}</div>
+          {% endif %}
+        {% else %}
+          <aside class="contact-card">
+            <h4>Contact</h4>
+            <div class="contact-body">{{ page.profile.more_info }}</div>
+          </aside>
         {% endif %}
       </div>
     {% endif %}
@@ -49,9 +58,9 @@ layout: default
     {% endif %}
 
     <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
+    {% if page.latest_posts and page.latest_posts.enabled and site.posts.size > 1 %}
       <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest blogs</a>
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}

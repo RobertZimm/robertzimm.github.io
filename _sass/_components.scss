@@ -68,6 +68,30 @@ ul.task-list input[type="checkbox"] {
       margin: 0;
     }
   }
+
+  .contact-card {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    background-color: var(--global-card-bg-color);
+    font-family: monospace;
+    font-size: 0.9rem;
+
+    h4 {
+      margin: 0 0 0.75rem 0;
+      font-family: inherit;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--global-theme-color);
+    }
+
+    .contact-body p {
+      margin: 0.2rem 0;
+      display: block;
+    }
+  }
 }
 
 .profile.float-right {

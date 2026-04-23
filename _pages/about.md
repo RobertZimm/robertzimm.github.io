@@ -6,13 +6,11 @@ subtitle: M.Sc. · Institute of Information Processing (TNT), Leibniz University
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false # crops the image to make it circular (only applies when a photo is rendered; path is set via site.profile_photo in _config.yml)
   more_info: >
     <p>Schneiderberg 32</p>
     <p>30167 Hannover, Germany</p>
-    <p>Tel: +49 511 762-5311</p>
-    <p>Fax: +49 511 762-5333</p>
+    <p>Phone: +49 511 762 5311</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
@@ -28,8 +26,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Robert Zimmermann studied Business Administration and Engineering at Leibniz University Hannover, specialising in Operations and Information Management, Digitalisation, and Automation. He received his M.Sc. in January 2026 with a master's thesis at the Institute of Information Processing (TNT) on interpretability methods for vision transformers — work that directly led to the DINO-QPM paper (CVPRW 2026).
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Since February 2026 he has been continuing this line of research as a PhD student at the same institute, focusing on the interpretability of visual foundation models.

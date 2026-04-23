@@ -1,11 +1,15 @@
 ---
 layout: page
 ---
-{{ content }}
+{% assign collection = site[page.collection] %}
+{% if collection.size == 0 %}
+  {% comment %} No books yet — bounce visitors to 404 so the page reads as "not here". {% endcomment %}
+  <meta http-equiv="refresh" content="0; url={{ '/404.html' | relative_url }}">
+  <script>window.location.replace("{{ '/404.html' | relative_url }}");</script>
+{% else %}
+  {{ content }}
 
-{% if page.collection and page.collection.size > 0 %}
-  {% assign collection = site[page.collection] %}
-  {% if collection and collection.size > 0 %}
+  {% if page.collection and page.collection.size > 0 %}
     {% for item in collection reversed %}
       {% assign current_year = item.started | date: '%Y' %}
       {% if current_year != year %}
